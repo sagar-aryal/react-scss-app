@@ -6,7 +6,6 @@
 @import "base/reset";
 
 // components
-@import "components/showcase";
 
 // layout
 @import "layout/grid";
@@ -15,6 +14,8 @@
 
 // pages
 @import "pages/about";
+@import "pages/showcase";
+@import "pages/portfolio";
 
 // utils
 @import "utils/container";

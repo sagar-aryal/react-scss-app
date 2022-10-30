@@ -10,17 +10,3 @@
   justify-content: center;
   align-items: center;
 }
-
-@mixin primary-btn {
-  padding: 1rem;
-  background: $secondary-dark;
-  color: $white;
-  width: 150px;
-  display: inline-block;
-  text-align: center;
-
-  &:hover {
-    background: $secondary-light;
-    color: $black;
-  }
-}
