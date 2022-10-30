@@ -1,0 +1,36 @@
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5rem;
+
+  &__logo {
+    background: $white;
+    color: $secondary-dark;
+    border-radius: 5px;
+    font-size: 3rem;
+    padding: 0 1rem;
+    margin-right: 5rem;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 3rem;
+
+    &--link {
+      color: $white;
+    }
+  }
+}
+
+.navbarOnScroll {
+  background: $white !important;
+
+  & a {
+    color: $black !important;
+  }
+}

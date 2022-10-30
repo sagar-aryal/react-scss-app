@@ -1,0 +1,34 @@
+.header {
+  width: 100%;
+  height: 80vh;
+  @include bgImage("../../images/hero.jpg");
+  background-color: $primary-dark;
+  background-blend-mode: overlay;
+  @include flexCenter;
+  flex-direction: column;
+  gap: 2rem;
+  color: $white;
+
+  &__heading {
+    font-size: 5rem;
+    letter-spacing: 0.5rem;
+    font-weight: 700;
+  }
+
+  &__links {
+    span {
+      display: inline-block;
+      transform: rotate(10deg);
+    }
+
+    &--single {
+      font-size: 2rem;
+      margin: 0 1rem;
+      color: $white;
+
+      &:hover {
+        color: $secondary-dark;
+      }
+    }
+  }
+}

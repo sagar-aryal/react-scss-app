@@ -1,0 +1,35 @@
+.about {
+  padding: 100px 0;
+  width: 100%;
+}
+
+.col-3__heading {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.col-9__content {
+  line-height: 2;
+}
+
+.col-4 {
+  padding: 5rem;
+  text-align: center;
+  margin-top: 5rem;
+
+  &__icon {
+    color: $secondary-dark;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+
+  &__content {
+    color: $white;
+  }
+}
