@@ -1,0 +1,43 @@
+.showcase {
+  @include bgImage("../../images/showcase.jpg");
+  width: 100%;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: $white;
+  display: flex;
+  align-items: center;
+  margin-bottom: 100px;
+
+  &__title {
+    font-size: 5rem;
+    font-weight: 700;
+  }
+
+  &__card {
+    position: absolute;
+    right: 0;
+    bottom: -250px;
+    width: 600px;
+    background-color: $secondary-light;
+    padding: 8rem 4rem;
+    color: $primary-dark;
+
+    &--title {
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: 0.2rem;
+      margin-bottom: 1rem;
+    }
+
+    &--sub-title {
+      font-size: 3rem;
+      font-weight: 600;
+      color: $black;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.relative {
+  position: relative;
+}

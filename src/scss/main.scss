@@ -6,11 +6,12 @@
 @import "base/reset";
 
 // components
-@import "components/header";
-@import "components/navbar";
+@import "components/showcase";
 
 // layout
 @import "layout/grid";
+@import "layout/header";
+@import "layout/navbar";
 
 // pages
 @import "pages/about";
