@@ -7,6 +7,29 @@ import {
 } from "react-icons/bs";
 
 const About = () => {
+  const services = [
+    {
+      id: 1,
+      icon: BsFillLightningChargeFill,
+      title: "Digital Marketing",
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. At inventore officia, neque adipisci quidem et fugiat vitae quaerat expedita numquam ullam! Architecto.",
+    },
+    {
+      id: 2,
+      icon: BsFillFileEarmarkCodeFill,
+      title: "Software Development",
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. At inventore officia, neque adipisci quidem et fugiat vitae quaerat expedita numquam ullam! Architecto.",
+    },
+    {
+      id: 3,
+      icon: BsBrush,
+      title: "Graphic Design",
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. At inventore officia, neque adipisci quidem et fugiat vitae quaerat expedita numquam ullam! Architecto.",
+    },
+  ];
   return (
     <div className="about">
       <div className="container">
@@ -34,39 +57,15 @@ const About = () => {
         </div>
 
         <div className="row">
-          <div className="col-4 ">
-            <div className="col-4__icon">
-              <BsFillLightningChargeFill />
+          {services.map((service) => (
+            <div className="col-4" key={service.id}>
+              <div className="col-4__icon">
+                <service.icon />
+              </div>
+              <div className="col-4__title">{service.title}</div>
+              <div className="col_4__content">{service.content}</div>
             </div>
-            <div className="col-4__title">Digital Marketing</div>
-            <div className="col_4__content">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-              quasi libero, aliquam unde repudiandae praesentium id tempore
-              iusto dolorum beatae?
-            </div>
-          </div>
-          <div className="col-4 ">
-            <div className="col-4__icon">
-              <BsFillFileEarmarkCodeFill />
-            </div>
-            <div className="col-4__title">Software Development</div>
-            <div className="col_4__content">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-              quasi libero, aliquam unde repudiandae praesentium id tempore
-              iusto dolorum beatae?
-            </div>
-          </div>
-          <div className="col-4">
-            <div className="col-4__icon">
-              <BsBrush />
-            </div>
-            <div className="col-4__title">Graphic Design</div>
-            <div className="col_4__content">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-              quasi libero, aliquam unde repudiandae praesentium id tempore
-              iusto dolorum beatae?
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
