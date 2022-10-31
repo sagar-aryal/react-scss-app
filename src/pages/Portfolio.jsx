@@ -1,10 +1,26 @@
 import React from "react";
 
-import johndoe from "../images/johndoe.jpg";
-import antonysmith from "../images/antonysmith.jpg";
-import noralath from "../images/noralath.jpg";
-
 const Portfolio = () => {
+  const profiles = [
+    {
+      id: 1,
+      name: "John Doe",
+      role: "CEO Founder",
+      image: require("../images/johndoe.jpg"),
+    },
+    {
+      id: 2,
+      name: "Antony Smith",
+      role: "Lead Developer",
+      image: require("../images/antonysmith.jpg"),
+    },
+    {
+      id: 3,
+      name: "Nora Lath",
+      role: "Lead Design",
+      image: require("../images/noralath.jpg"),
+    },
+  ];
   return (
     <div className="portfolio">
       <div className="container">
@@ -15,39 +31,19 @@ const Portfolio = () => {
           </div>
           <div className="col-8">
             <div className="row">
-              <div className="col-4">
-                <div className="portfolio__card">
-                  <img
-                    src={johndoe}
-                    alt="johndoe"
-                    className="portfolio__card--img"
-                  />
-                  <h5 className="portfolio__card--name">John Doe</h5>
-                  <p className="portfolio__card--role">CEO Founder</p>
+              {profiles.map((profile) => (
+                <div className="col-4" key={profile.id}>
+                  <div className="portfolio__card">
+                    <img
+                      src={profile.image}
+                      alt={profile.name}
+                      className="portfolio__card--img"
+                    />
+                    <h5 className="portfolio__card--name">{profile.name}</h5>
+                    <p className="portfolio__card--role">{profile.role}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="col-4">
-                <div className="portfolio__card">
-                  <img
-                    src={antonysmith}
-                    alt="antonysmith"
-                    className="portfolio__card--img"
-                  />
-                  <h5 className="portfolio__card--name">Antony Smith</h5>
-                  <p className="portfolio__card--role">Lead Developer</p>
-                </div>
-              </div>
-              <div className="col-4">
-                <div className="portfolio__card">
-                  <img
-                    src={noralath}
-                    alt="noralath"
-                    className="portfolio__card--img"
-                  />
-                  <h5 className="portfolio__card--name">Nora Lath</h5>
-                  <p className="portfolio__card--role">Lead Design</p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
